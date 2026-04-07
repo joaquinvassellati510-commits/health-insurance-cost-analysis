@@ -1,0 +1,9 @@
+-- Analiza el costo que presentan los fumadores respecto a los no fumadores
+-- Objetivo: Comparar el costo de fumadores vs no fumadores para identificar desviaciones.
+
+SELECT
+    smoker,
+    ROUND(AVG(charges), 2) AS average_cost,
+    ROUND(SUM(charges), 2) AS total_cost
+FROM medical-cost-personal-dataset.medical_costs.seguro_salud
+GROUP BY smoker;
