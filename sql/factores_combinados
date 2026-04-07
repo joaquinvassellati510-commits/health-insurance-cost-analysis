@@ -1,0 +1,16 @@
+-- Analiza cuales son los pacientes que tienen una sementacion de mayor costo
+-- Objetivo: agrupar pacientes segun su BMI y si son positivos a fumar, para visualizar le costo
+
+SELECT
+smoker,
+CASE
+WHEN bmi >= 30 THEN 'obese'
+WHEN bmi BETWEEN 25 AND 29.9 THEN 'overweight'
+ELSE 'normal'
+END AS categoria_bmi,
+COUNT(*) AS total_pacientes,
+ROUND(AVG(charges), 2) AS costo_promedio,
+ROUND(SUM(charges), 2) AS costo_total
+FROM medical-cost-personal-dataset.medical_costs.seguro_salud
+GROUP BY smoker, categoria_bmi
+ORDER BY costo_total DESC;
