@@ -1,0 +1,10 @@
+-- Analiza el porcentaje de gasto que poseen los fumadores
+-- Objetivo: descubrir el gasto que producenlos fumadores, para analizar si hay que crear un proyecto preventivo
+
+
+SELECT
+ROUND(
+SUM(CASE WHEN smoker IS TRUE THEN charges ELSE 0 END)
+/ SUM(charges) * 100
+, 2) AS porcentaje_gasto_fumadores
+FROM medical-cost-personal-dataset.medical_costs.seguro_salud;
