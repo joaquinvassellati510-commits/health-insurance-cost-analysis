@@ -55,3 +55,8 @@ Mi objetivo es combinar la evidencia clínica con el análisis de datos para mej
 Soy estudiante de **Lic. en Nutrición en la UNLP** (Argentina) con orientación en **Data Science**. Mi objetivo es combinar la evidencia clínica con el análisis de datos para mejorar la toma de decisiones en el sector salud (HealthTech).
 
 ---
+
+## Origen de los Datos
+El dataset utilizado para este proyecto es el **Medical Cost Personal Dataset**, obtenido de **Kaggle**. Contiene datos sobre costos médicos individuales facturados por seguros de salud en Estados Unidos.
+
+🔗 **Link al Dataset:** [Medical Cost Personal Dataset (Kaggle)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
