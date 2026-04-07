@@ -43,7 +43,7 @@ A través de una **Master Query en SQL**, se realizaron los siguientes procesos:
 ---
 
 ## Dashboard Interactivo
-> [**Ver Dashboard en Looker Studio**](PEGÁ_ACÁ_TU_LINK_DE_LOOKER)
+> (https://lookerstudio.google.com/s/s_yxizDE9So)
 
 ![Dashboard Preview](images/dashboard.png)
 
