@@ -1,0 +1,15 @@
+-- Analiza que grupos de segmentacion tiene el mayor gasto total
+-- Objetivo: segmentar a los pacientes en grupos segun si gasto total 
+
+SELECT
+CASE
+WHEN charges < 10000 THEN'bajo'
+WHEN charges BETWEEN 10000 AND 20000 THEN 'medio'
+ELSE'alto'
+ENDAS segmento,
+COUNT(*) AS total_pacientes,
+  ROUND(AVG(charges),2)AS costo_promedio,
+  ROUND(SUM(charges),2)AS costo_total
+FROM medical-cost-personal-dataset.medical_costs.seguro_salud
+GROUP BY segmento
+ORDER BY costo_total DESC;
