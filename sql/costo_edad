@@ -1,0 +1,15 @@
+-- Analiza los gastos dividinedo a los pacientes en grupos de edad
+-- Objetivo: descubrir cual es el rango de edad que produce mas gastos
+
+SELECT
+CASE
+WHEN age BETWEEN 18 AND 30 THEN'18-30'
+WHEN age BETWEEN 31 AND 50 THEN'31-50'
+ELSE'50+'
+END AS rango_edad,
+COUNT(*)AS total_pacientes,
+  ROUND(AVG(charges),2)AS costo_promedio,
+  ROUND(SUM(charges),2)AS costo_total
+FROM medical-cost-personal-dataset.medical_costs.seguro_salud
+GROUP BY rango_edad
+ORDER BY costo_promedio DESC;
